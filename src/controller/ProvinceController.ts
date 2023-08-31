@@ -34,6 +34,7 @@ const GetProvince =async (req:Request,res:Response):Promise<Response> => {
 
 const CreateProvince = async (req: Request, res: Response): Promise<Response> => {
 	try {
+
 		const { provinceName } = req.body;
 
 		const create = await Province.create({
@@ -64,6 +65,9 @@ const CreateProvince = async (req: Request, res: Response): Promise<Response> =>
 
 const UpdateProvince = async (req: Request, res: Response): Promise<Response> => {
 	try {
+
+        console.log(req.params)
+
 		const { id } = req.params;
 		const { provinceName } = req.body;
 

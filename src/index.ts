@@ -1,15 +1,16 @@
 import express, {Request , Response, Router} from "express";
 import dotenv from "dotenv";
 import router from "./routes/Routes";
+import bodyParser from "body-parser";
+
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../swagger.json');
 const swaggerJsdoc = require('swagger-jsdoc');
 
 const options = {
     definition: {
       openapi: '3.0.0',
       info: {
-        title: 'Hello World',
+        title: 'REST API PROVINCE',
         version: '1.0.0',
       },
     },
@@ -27,6 +28,8 @@ app.get("/",(req:Request, res:Response)=>{
         response: "Hello World"
     })
 })
+
+app.use(bodyParser.json())
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 
 
