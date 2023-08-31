@@ -13,6 +13,7 @@ const options = {
         title: 'REST API PROVINCE',
         version: '1.0.0',
       },
+      
     },
     apis: ['./src/routes/Routes.ts'], // files containing annotations as above
   };

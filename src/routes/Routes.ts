@@ -3,14 +3,10 @@ import ProvinceController from "../controller/ProvinceController";
 import { Get, Route } from "tsoa";
 
 
+
+
 const router= express.Router();
 
-/**
-   * @openapi
-   * tags:
-   *   name: Province
-   *   description: Province Rest API
-   */
 
 /**
  * @openapi
